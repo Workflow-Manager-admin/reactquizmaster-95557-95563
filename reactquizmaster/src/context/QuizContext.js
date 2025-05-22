@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
 import quizData from '../data/quizData';
 import { shuffleArray } from '../utils/quizUtils';
+import { initSounds, playCorrectSound, playIncorrectSound } from '../utils/soundEffects';
 
 // Create the quiz context
 export const QuizContext = createContext();
@@ -135,9 +136,10 @@ export const QuizProvider = ({ children }) => {
     };
   }, [timerActive, timeLeft, currentQuestionIndex, questions, selectedAnswer]);
 
-  // Initialize quiz on first load
+  // Initialize quiz and sounds on first load
   useEffect(() => {
     initializeQuiz();
+    initSounds();
   }, [initializeQuiz]);
 
   // Calculate progress percentage
