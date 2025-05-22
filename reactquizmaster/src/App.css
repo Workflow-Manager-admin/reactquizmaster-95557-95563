@@ -16,7 +16,8 @@
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Helvetica', 'Arial', sans-serif;
-  background-color: var(--kavia-dark);
+  background: linear-gradient(135deg, var(--quizverse-dark) 0%, #2A2A5E 100%);
+  background-attachment: fixed;
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
