@@ -1,6 +1,12 @@
 import React from 'react';
 import './App.css';
+import { QuizProvider } from './context/QuizContext';
+import QuizContainer from './components/QuizContainer';
 
+/**
+ * Main App component that wraps the QuizContainer with QuizProvider
+ * for global state management
+ */
 function App() {
   return (
     <div className="app">
@@ -8,27 +14,16 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div className="logo">
-              <span className="logo-symbol">*</span> KAVIA AI
+              <span className="logo-symbol">*</span> ReactQuizMaster
             </div>
-            <button className="btn">Template Button</button>
           </div>
         </div>
       </nav>
 
-      <main>
-        <div className="container">
-          <div className="hero">
-            <div className="subtitle">AI Workflow Manager Template</div>
-            
-            <h1 className="title">reactquizmaster</h1>
-            
-            <div className="description">
-              Start building your application.
-            </div>
-            
-            <button className="btn btn-large">Button</button>
-          </div>
-        </div>
+      <main className="main-content">
+        <QuizProvider>
+          <QuizContainer />
+        </QuizProvider>
       </main>
     </div>
   );
