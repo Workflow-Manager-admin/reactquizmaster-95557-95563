@@ -1,12 +1,19 @@
 .question-container {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
+  background-color: var(--card-bg);
+  border-radius: 16px;
   padding: 2rem;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   border: 1px solid var(--border-color);
+  transition: all var(--transition-speed);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .question-text {
