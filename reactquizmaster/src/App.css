@@ -129,3 +129,77 @@ body {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+/* Admin Panel Additional Styles */
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: 0.375rem;
+  transition: all 0.2s ease;
+}
+
+.admin-nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.admin-nav-link.active {
+  background-color: rgba(74, 111, 255, 0.2);
+  color: white;
+  border-left: 4px solid var(--quizverse-primary);
+}
+
+.admin-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+}
+
+.admin-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.375rem;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: var(--quizverse-primary);
+  box-shadow: 0 0 0 2px rgba(74, 111, 255, 0.3);
+}
+
+.admin-input.error {
+  border-color: var(--quizverse-accent);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.admin-table th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.75rem;
+}
+
+.admin-table td {
+  padding: 0.75rem 1rem;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.admin-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.03);
+}
