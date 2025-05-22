@@ -95,10 +95,12 @@ const QuestionForm = () => {
     setIsSubmitting(true);
     
     try {
-      // Convert timeLimit to number
+      // Convert timeLimit to number and ensure valid values
       const questionData = {
         ...formData,
-        timeLimit: parseInt(formData.timeLimit, 10)
+        timeLimit: parseInt(formData.timeLimit, 10) || 30,
+        difficulty: formData.difficulty || 'medium',
+        category: formData.category || 'General Knowledge'
       };
       
       // Add or update question
