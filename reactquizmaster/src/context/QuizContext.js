@@ -50,6 +50,9 @@ export const QuizProvider = ({ children }) => {
     setIsAnswerCorrect(isCorrect);
     if (isCorrect) {
       setScore(prevScore => prevScore + 1);
+      playCorrectSound();
+    } else {
+      playIncorrectSound();
     }
 
     // Store user's answer
