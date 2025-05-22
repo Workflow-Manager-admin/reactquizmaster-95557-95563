@@ -16,7 +16,7 @@ const AdminDashboard = () => {
     const difficulty = question.difficulty || 'medium';
     acc[difficulty] = (acc[difficulty] || 0) + 1;
     return acc;
-  }, {});
+  }, {easy: 0, medium: 0, hard: 0});
   
   // Group questions by category
   const categoryCounts = questions.reduce((acc, question) => {
