@@ -85,8 +85,12 @@
 
 .performance-level {
   font-size: 1.8rem;
-  color: var(--kavia-orange);
+  color: var(--quizverse-primary);
   margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, var(--quizverse-primary), var(--quizverse-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
 }
 
 .feedback-text {
