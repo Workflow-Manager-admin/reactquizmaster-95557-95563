@@ -33,31 +33,65 @@
 .option-button {
   background-color: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 1rem;
+  border-radius: 12px;
+  padding: 1.2rem;
   text-align: left;
   font-size: 1rem;
   color: var(--text-color);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all var(--transition-speed) ease;
+  display: flex;
+  align-items: center;
 }
 
 .option-button:hover:not(:disabled) {
   background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .option-button.selected {
-  border-color: var(--kavia-orange);
+  border-color: var(--quizverse-primary);
+  box-shadow: 0 0 0 2px var(--quizverse-primary);
 }
 
 .option-button.correct {
   background-color: rgba(76, 175, 80, 0.2);
-  border-color: #4caf50;
+  border-color: var(--success-color);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
 .option-button.incorrect {
   background-color: rgba(244, 67, 54, 0.2);
-  border-color: #f44336;
+  border-color: var(--error-color);
+  box-shadow: 0 0 10px rgba(244, 67, 54, 0.3);
+}
+
+.option-button::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  margin-right: 12px;
+  flex-shrink: 0;
+  transition: all var(--transition-speed);
+}
+
+.option-button.selected::before {
+  border-color: var(--quizverse-primary);
+  background-color: var(--quizverse-primary);
+}
+
+.option-button.correct::before {
+  border-color: var(--success-color);
+  background-color: var(--success-color);
+}
+
+.option-button.incorrect::before {
+  border-color: var(--error-color);
+  background-color: var(--error-color);
 }
 
 .option-button:disabled {
