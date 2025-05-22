@@ -14,7 +14,7 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'space-between', width: '100%' }}>
             <div className="logo">
-              <span className="logo-symbol">*</span> ReactQuizMaster
+              <span className="logo-symbol">*</span> QuizVerse
             </div>
           </div>
         </div>
