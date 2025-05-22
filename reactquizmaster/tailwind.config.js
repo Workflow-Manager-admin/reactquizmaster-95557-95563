@@ -1,21 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: {
-    content: [
-      "./src/**/*.{js,jsx,ts,tsx}",
-      "./public/index.html"
-    ],
-    options: {
-      safelist: [
-        'bg-green-500',
-        'bg-yellow-500',
-        'bg-red-500',
-        /^bg-.*-500\/20$/,
-        /^text-.*-300$/,
-        /^border-.*-500\/50$/
-      ]
-    }
-  },
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./public/index.html"
+  ],
+  safelist: [
+    'bg-green-500',
+    'bg-yellow-500',
+    'bg-red-500',
+    /^bg-.*-500\/20$/,
+    /^text-.*-300$/,
+    /^border-.*-500\/50$/
+  ],
   theme: {
     extend: {
       colors: {
