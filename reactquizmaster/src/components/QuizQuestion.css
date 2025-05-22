@@ -126,7 +126,16 @@
 }
 
 .next-button {
-  padding: 12px 24px;
-  margin-top: 0.5rem;
+  padding: 14px 28px;
+  margin-top: 0.8rem;
   width: 100%;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transform: translateY(0);
+  transition: all var(--transition-speed) ease;
+}
+
+.next-button:hover {
+  transform: translateY(-2px);
 }
