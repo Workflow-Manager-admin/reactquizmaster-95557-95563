@@ -10,11 +10,11 @@ const Welcome = () => {
 
   return (
     <div className="welcome-container">
-      <h1 className="welcome-title">Welcome to ReactQuizMaster</h1>
+      <h1 className="welcome-title">Welcome to QuizVerse</h1>
       <div className="welcome-card">
-        <h2>Test Your React Knowledge</h2>
+        <h2>Test Your General Knowledge</h2>
         <p className="welcome-description">
-          This quiz contains {totalQuestions} questions about React.js fundamentals.
+          This quiz contains {totalQuestions} general knowledge questions on various topics.
           You'll have 30 seconds to answer each question.
         </p>
         
