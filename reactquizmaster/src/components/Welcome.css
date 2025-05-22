@@ -1,0 +1,57 @@
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.welcome-title {
+  color: var(--text-color);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.welcome-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+}
+
+.welcome-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.instructions {
+  text-align: left;
+  margin: 1.5rem 0;
+}
+
+.instructions h3 {
+  color: var(--kavia-orange);
+  margin-bottom: 0.5rem;
+}
+
+.instructions ul {
+  padding-left: 1.5rem;
+}
+
+.instructions li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.start-button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
