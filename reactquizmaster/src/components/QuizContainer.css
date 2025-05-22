@@ -37,4 +37,14 @@
   .quiz-container {
     padding: 1rem;
   }
+  
+  .quiz-wrapper {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 0.5rem;
+  }
 }
