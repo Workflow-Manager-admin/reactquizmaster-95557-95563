@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect, useCallback } from 'react';
-import quizData from '../data/quizData';
-import { shuffleArray } from '../utils/quizUtils';
+import { fullQuestionPool } from '../data/quizData';
+import { shuffleArray, selectRandomQuestions } from '../utils/quizUtils';
 import { initSounds, playCorrectSound, playIncorrectSound } from '../utils/soundEffects';
 
 // Create the quiz context
