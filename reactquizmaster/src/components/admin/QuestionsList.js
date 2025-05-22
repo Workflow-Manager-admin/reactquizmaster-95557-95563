@@ -196,12 +196,12 @@ const QuestionsList = () => {
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm">
                     <span className={`px-2 py-1 rounded-full text-xs font-medium
-                      ${question.difficulty === 'easy' ? 'bg-green-500/20 text-green-300' : 
-                        question.difficulty === 'hard' ? 'bg-red-500/20 text-red-300' : 
+                      ${(question.difficulty || 'medium') === 'easy' ? 'bg-green-500/20 text-green-300' : 
+                        (question.difficulty || 'medium') === 'hard' ? 'bg-red-500/20 text-red-300' : 
                         'bg-yellow-500/20 text-yellow-300'}`
                       }
                     >
-                      {formatDifficulty(question.difficulty)}
+                      {formatDifficulty(question.difficulty || 'medium')}
                     </span>
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
