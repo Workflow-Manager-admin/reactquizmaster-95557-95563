@@ -3,6 +3,33 @@
  */
 
 /**
+ * Selects a random subset of questions from a larger pool
+ * @param {Array} questionPool - The full pool of available questions
+ * @param {number} count - Number of questions to select
+ * @returns {Array} - A random subset of questions
+ */
+export const selectRandomQuestions = (questionPool, count) => {
+  // Make sure we don't try to select more questions than are available
+  const selectionCount = Math.min(count, questionPool.length);
+  
+  // Create a copy of the question pool to avoid modifying the original
+  const poolCopy = [...questionPool];
+  const selectedQuestions = [];
+  
+  // Select random questions from the pool
+  for (let i = 0; i < selectionCount; i++) {
+    // Get a random index from the remaining questions
+    const randomIndex = Math.floor(Math.random() * poolCopy.length);
+    // Add the randomly selected question to our selection
+    selectedQuestions.push(poolCopy[randomIndex]);
+    // Remove the selected question from the copy to avoid duplicates
+    poolCopy.splice(randomIndex, 1);
+  }
+  
+  return selectedQuestions;
+};
+
+/**
  * Shuffles an array using the Fisher-Yates (Knuth) shuffle algorithm
  * @param {Array} array - The array to be shuffled
  * @returns {Array} - The shuffled array
