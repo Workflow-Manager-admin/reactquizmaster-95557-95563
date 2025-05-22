@@ -14,8 +14,8 @@ const Welcome = () => {
       <div className="welcome-card">
         <h2>Test Your General Knowledge</h2>
         <p className="welcome-description">
-          This quiz contains {totalQuestions} general knowledge questions on various topics.
-          You'll have 30 seconds to answer each question.
+          This quiz contains {totalQuestions} general knowledge questions randomly selected from our question pool.
+          You'll have 30 seconds to answer each question. Each time you restart the quiz, you'll get different questions!
         </p>
         
         <div className="instructions">

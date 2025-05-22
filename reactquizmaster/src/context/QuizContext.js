@@ -20,9 +20,15 @@ export const QuizProvider = ({ children }) => {
   const [userAnswers, setUserAnswers] = useState([]);
   const [timerActive, setTimerActive] = useState(false);
 
-  // Initialize quiz with shuffled questions
+  // Number of questions to select for each quiz
+  const QUESTIONS_PER_QUIZ = 5;
+  
+  // Initialize quiz with randomly selected and shuffled questions
   const initializeQuiz = useCallback(() => {
-    const shuffledQuestions = shuffleArray(quizData);
+    // Select a random subset of questions from the full pool
+    const randomQuestions = selectRandomQuestions(fullQuestionPool, QUESTIONS_PER_QUIZ);
+    // Shuffle the selected questions
+    const shuffledQuestions = shuffleArray(randomQuestions);
     setQuestions(shuffledQuestions);
     setCurrentQuestionIndex(0);
     setSelectedAnswer('');
