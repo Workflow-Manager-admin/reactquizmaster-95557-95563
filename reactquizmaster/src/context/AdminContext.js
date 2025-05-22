@@ -26,18 +26,34 @@ export const AdminProvider = ({ children }) => {
       try {
         const savedQuestions = localStorage.getItem('quizverse_questions');
         
+        let questionsToUse;
+        
         if (savedQuestions) {
-          setQuestions(JSON.parse(savedQuestions));
+          questionsToUse = JSON.parse(savedQuestions);
         } else {
           // If no questions in localStorage, use the default question pool
-          setQuestions(fullQuestionPool);
-          // Save to localStorage
-          localStorage.setItem('quizverse_questions', JSON.stringify(fullQuestionPool));
+          questionsToUse = fullQuestionPool;
         }
+        
+        // Ensure all questions have category and difficulty fields
+        const enhancedQuestions = questionsToUse.map(question => ({
+          ...question,
+          category: question.category || 'General Knowledge',
+          difficulty: question.difficulty || 'medium'
+        }));
+        
+        // Save to localStorage with enhanced questions
+        localStorage.setItem('quizverse_questions', JSON.stringify(enhancedQuestions));
+        setQuestions(enhancedQuestions);
       } catch (error) {
         console.error('Failed to load questions:', error);
-        // Fallback to default question pool
-        setQuestions(fullQuestionPool);
+        // Fallback to default question pool with enhancements
+        const enhancedQuestions = fullQuestionPool.map(question => ({
+          ...question,
+          category: question.category || 'General Knowledge',
+          difficulty: question.difficulty || 'medium'
+        }));
+        setQuestions(enhancedQuestions);
       } finally {
         setLoading(false);
       }
