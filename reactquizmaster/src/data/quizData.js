@@ -1,127 +1,127 @@
 /**
- * Sample quiz data with questions, answer options, and correct answers
+ * General knowledge quiz data with questions, answer options, and correct answers
  * Each question includes a unique id, question text, options array, and correct answer
  */
 
 const quizData = [
   {
     id: 1,
-    question: "What is React.js?",
+    question: "Which planet in our solar system is known as the 'Red Planet'?",
     options: [
-      "A JavaScript library for building user interfaces",
-      "A programming language",
-      "A database management system",
-      "An operating system"
+      "Venus",
+      "Mars",
+      "Jupiter",
+      "Saturn"
     ],
-    correctAnswer: "A JavaScript library for building user interfaces",
+    correctAnswer: "Mars",
     timeLimit: 30 // time in seconds
   },
   {
     id: 2,
-    question: "Which of the following is used to pass data from parent to child component?",
+    question: "Which element has the chemical symbol 'Au'?",
     options: [
-      "State",
-      "Props",
-      "Context",
-      "Reducer"
+      "Silver",
+      "Gold",
+      "Aluminum",
+      "Copper"
     ],
-    correctAnswer: "Props",
+    correctAnswer: "Gold",
     timeLimit: 30
   },
   {
     id: 3,
-    question: "What hook is used to handle side effects in React?",
+    question: "What is the capital city of Japan?",
     options: [
-      "useState",
-      "useEffect",
-      "useContext",
-      "useReducer"
+      "Seoul",
+      "Beijing",
+      "Tokyo",
+      "Bangkok"
     ],
-    correctAnswer: "useEffect",
+    correctAnswer: "Tokyo",
     timeLimit: 30
   },
   {
     id: 4,
-    question: "Which method is used to render a React component?",
+    question: "Who painted the Mona Lisa?",
     options: [
-      "render()",
-      "ReactDOM.render()",
-      "display()",
-      "show()"
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Leonardo da Vinci",
+      "Michelangelo"
     ],
-    correctAnswer: "ReactDOM.render()",
+    correctAnswer: "Leonardo da Vinci",
     timeLimit: 30
   },
   {
     id: 5,
-    question: "What is JSX in React?",
+    question: "Which of these animals is a mammal?",
     options: [
-      "JavaScript XML - A syntax extension for JavaScript",
-      "JavaScript Extension",
-      "JavaScript Extra",
-      "JavaScript XHR"
+      "Shark",
+      "Seahorse",
+      "Dolphin",
+      "Octopus"
     ],
-    correctAnswer: "JavaScript XML - A syntax extension for JavaScript",
+    correctAnswer: "Dolphin",
     timeLimit: 30
   },
   {
     id: 6,
-    question: "Which lifecycle method is called after a component has been rendered?",
+    question: "What is the largest ocean on Earth?",
     options: [
-      "componentWillMount",
-      "componentDidMount",
-      "componentDidUpdate",
-      "componentWillUpdate"
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Pacific Ocean"
     ],
-    correctAnswer: "componentDidMount",
+    correctAnswer: "Pacific Ocean",
     timeLimit: 30
   },
   {
     id: 7,
-    question: "What is the purpose of React Router?",
+    question: "Which country is home to the Great Barrier Reef?",
     options: [
-      "Data fetching",
-      "State management",
-      "Navigation between pages",
-      "Form validation"
+      "Brazil",
+      "Australia",
+      "Mexico",
+      "Thailand"
     ],
-    correctAnswer: "Navigation between pages",
+    correctAnswer: "Australia",
     timeLimit: 30
   },
   {
     id: 8,
-    question: "What does the useState hook return?",
+    question: "What is the smallest prime number?",
     options: [
-      "A single state value",
-      "An array with state value and update function",
-      "A boolean indicating if state was set",
-      "An object with current and previous state"
+      "0",
+      "1",
+      "2",
+      "3"
     ],
-    correctAnswer: "An array with state value and update function",
+    correctAnswer: "2",
     timeLimit: 30
   },
   {
     id: 9,
-    question: "Which package is commonly used for state management in large React applications?",
+    question: "Which of these instruments is a woodwind?",
     options: [
-      "React-State",
-      "React-Manager",
-      "Redux",
-      "Context-API"
+      "Violin",
+      "Trumpet",
+      "Clarinet",
+      "Drums"
     ],
-    correctAnswer: "Redux",
+    correctAnswer: "Clarinet",
     timeLimit: 30
   },
   {
     id: 10,
-    question: "What is a Higher Order Component (HOC) in React?",
+    question: "Which famous scientist developed the theory of relativity?",
     options: [
-      "A component with many nested elements",
-      "A function that takes a component and returns a new component",
-      "The top level component in a React application",
-      "A component with complex state logic"
+      "Isaac Newton",
+      "Albert Einstein",
+      "Marie Curie",
+      "Nikola Tesla"
     ],
-    correctAnswer: "A function that takes a component and returns a new component",
+    correctAnswer: "Albert Einstein",
     timeLimit: 30
   }
 ];
